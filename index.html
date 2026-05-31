@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة المعرفة الشاملة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 🥇 مرحلة بدء المسابقة (صفحة الاسم) -->
+        <section id="start-screen" class="screen active">
+            <h1>🏆 مسابقة المعرفة الشاملة 🧠</h1>
+            <p>أهلاً بك! الرجاء إدخال اسمك للبدء في التحدي.</p>
+            <input type="text" id="username" placeholder="ادخل اسمك هنا" required>
+            <button id="start-button">ابدأ المسابقة</button>
+        </section>
+
+        <!-- 📚 مرحلة عرض الأسئلة (ستظهر بالترتيب) -->
+        <section id="quiz-container" class="screen">
+            <!-- سيتم توليد المحتوى هنا بواسطة JavaScript -->
+            <h2 id="question-counter">السؤال 1 من 25</h2>
+            <div id="question-box" class="question-box">
+                <!-- نص السؤال -->
+                <p id="question-text" class="question-text"></p>
+                
+                <!-- خيارات الإجابة -->
+                <div id="options-container" class="options-container">
+                    <!-- سيتم توليد الأزرار هنا بواسطة JavaScript -->
+                </div>
+            </div>
+            
+            <!-- زر التالي/التالي -->
+            <button id="next-button" class="next-button" style="display:none;">السؤال التالي</button>
+        </section>
+
+        <!-- ✅ مرحلة النتائج النهائية -->
+        <section id="result-screen" class="screen hidden">
+            <h2>🎉 انتهت المسابقة! 🎉</h2>
+            <div class="result-summary">
+                <p class="user-name-display">الاسم: <span id="final-user-name"></span></p>
+                <p class="score-display">نتيجة المسابقة: <span id="final-score">0</span> / 25</p>
+            </div>
+
+            <div id="detailed-feedback" class="feedback-container">
+                <!-- سيتم عرض تحليل الأخطاء والتصحيحات هنا -->
+            </div>
+            
+            <button id="restart-button">ابدأ من جديد</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
